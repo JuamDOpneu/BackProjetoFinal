@@ -1,7 +1,7 @@
 package com.example.memorygame.controller
 
 import com.example.memorygame.repository.MemoryCardRepository // Importe o seu repositório de cartas
-import com.example.memorygame.repository.PlayerRepository
+import com.example.memorygame.repository.UserRepository
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -19,7 +19,7 @@ data class DashboardStats(
 @CrossOrigin(origins = ["*"])
 class DashboardController(
     private val cardRepository: MemoryCardRepository, // Certifique-se que esse nome bate com o seu arquivo
-    private val playerRepository: PlayerRepository
+    private val playerRepository: UserRepository
 ) {
 
     @GetMapping("/stats")
